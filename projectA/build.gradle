@@ -1,0 +1,37 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+
+
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+
+sourceSets {
+    main {
+        java {
+//		 srcDir file("${rootProject.projectDir}/projectA/src/main/java/minimal/")
+		 srcDir '.'
+		 srcDir 'src/main/java/minimal/'
+     
+        }
+    }
+
+    test {
+        java {
+		 srcDir file("${rootProject.projectDir}/test/java/minimal")
+        }
+    }
+
+}
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.8.1'
+}

@@ -1,0 +1,5 @@
+rootProject.name = 'projectMultiJunit'
+include 'projectA'
+include 'projectB'
+include 'projectC'
+
